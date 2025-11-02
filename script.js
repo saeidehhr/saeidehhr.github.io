@@ -129,7 +129,7 @@ function addLegend() {
 }
 
 // ===== Fetch and init =====
-fetch('data/qatar.geojson')
+fetch('qatar.geojson')
   .then(r => {
     if (!r.ok) throw new Error(`HTTP ${r.status} for data/qatar.geojson`);
     return r.json();
