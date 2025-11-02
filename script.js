@@ -1,8 +1,13 @@
+
 const map = L.map('map').setView([25.3, 51.2], 8);
 
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png?lang=en', {
-  attribution: '&copy; OpenStreetMap contributors'
+// Carto Voyager (EN labels, Latin script)
+L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+  attribution: '&copy; OpenStreetMap contributors, &copy; CARTO',
+  subdomains: 'abcd',
+  maxZoom: 20
 }).addTo(map);
+
 
 
 // ===== SPI classification → label + color =====
